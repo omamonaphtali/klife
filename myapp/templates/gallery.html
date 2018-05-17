@@ -1,0 +1,24 @@
+{% extends 'base_layout.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="row mini-banner" style="background: url('{% static 'images/IMG_8836.jpg' %}')">
+    {% include 'includes/navbar.html' %}
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+            </ol>
+        </nav>
+		<div class="banner-text">
+			<div class="container">
+				<div class="banner-w3lstext">
+					<h1><a href="">Kenyan Lifestyle</a></h1>
+					<p>Wear what you want</p>
+				</div>
+			</div>
+		</div>
+    </div>
+
+
+{% endblock %}

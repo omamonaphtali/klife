@@ -1,0 +1,81 @@
+{% extends 'base_layout.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="row mini-banner" style="background: url('{% static 'images/IMG_8836.jpg' %}')">
+    {% include 'includes/navbar.html' %}
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+            </ol>
+        </nav>
+		<div class="banner-text">
+			<div class="container">
+				<div class="banner-w3lstext">
+					<h1><a href="">Kenyan Lifestyle</a></h1>
+					<p>Wear what you want</p>
+				</div>
+			</div>
+		</div>
+    </div>
+<!-- map -->
+	<div id="contact" class="map">
+		<div class="col-sm-6 map-right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d997.2044851944956!2d36.8235614!3d-1.2830765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d5ef82815f%3A0x2b087c5079b170a9!2sImenti+House!5e0!3m2!1sen!2ske!4v1526564482896" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+		<div class="map-pos">
+			<div class="address-row">
+				<div class="col-xs-2 address-left">
+					<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+				</div>
+				<div class="col-xs-10 address-right">
+					<h5>Visit Us</h5>
+					<p>Shop 52B, Imenti Hse<br>Nairobi, Kenya</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="address-row w3-agileits">
+				<div class="col-xs-2 address-left">
+					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+				</div>
+				<div class="col-xs-10 address-right">
+					<h5>Mail Us</h5>
+					<p><a href="mailto:johnlawi72@gmail.com"> johnlawi72@gmail.com</a></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="address-row">
+				<div class="col-xs-2 address-left">
+					<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+				</div>
+				<div class="col-xs-10 address-right">
+					<h5>Call Us</h5>
+					<p><a href="tel:+254707081315">+254 707 081 315</a></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- //map -->
+	<!-- contact -->
+	<div class="contact">
+		<div class="container">
+			<h3 class="agileinfo_title">Contact<span> Us</span> </h3>
+			<form action="#" method="post">
+				<div class="col-sm-6 contact-left">
+					<input type="text" name="Name" placeholder="Your Name" required="">
+					<input type="email" name="Email" placeholder="Email" required="">
+					<input type="text" name="Mobile Number" placeholder="Mobile Number" required="">
+				</div>
+				<div class="col-sm-6 contact-right">
+					<textarea name="Message" placeholder="Message" required=""></textarea>
+					<input type="submit" value="Submit" >
+				</div>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+	</div>
+	<!-- //contact -->
+{% endblock %}
