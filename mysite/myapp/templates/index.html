@@ -1,0 +1,222 @@
+{% extends 'base_layout.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<!-- banner -->
+	<div class="agileits-banner jarallax" style="background: url('{% static 'images/IMG_8836.jpg' %}')">
+		<!-- navigation -->
+		{% include 'includes/navbar.html' %}
+		<!-- //navigation -->
+		<!-- banner-text -->
+		<div class="banner-text"> 
+			<div class="container"> 
+				<div class="banner-w3lstext"> 
+					<h1><a href="">Kenyan Lifestyle<span>Welcome To</span></a></h1>
+					<p>Wear what you want</p>
+				</div> 
+			</div>
+		</div>
+		<!-- //banner-text --> 
+	</div>
+	<!-- //banner --> 
+	<!-- latest product -->
+	<div id="about" class="banner-bottom-grids">
+		<div class="col-md-7 col-xs-7 banner-bottom-grid-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+			<h2>Discover the art of <span> Prints</span></h2>
+			<p>Introducing the all new line of bold prints for the fashion-frenzy. Seeking an adventure? Do you want to
+                step out of your comfort zone?</p>
+			<div class="more">
+				<a href="#myModal" data-toggle="modal" >Learn More...</a>
+                <!-- link to collection -->
+			</div>
+		</div>
+		<div class="col-md-5 col-xs-5 banner-bottom-grid animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
+			<div class="img-container text-center">
+                <img src="{% static 'images/IMG_8817.jpg' %}" alt=" " class="img-responsive" />
+            </div>
+			<div class="banner-bottom-grid1">
+				<div class="banner-bottom-grid1-pos animated wow fadeInUpBig" data-wow-duration="1000ms" data-wow-delay="500ms">
+					<h3>Dare to defy the borders<br>Bring out your Bold </h3>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div> 
+	<!-- //latest product -->
+    <!-- featured-product -->
+	<div class="featured-product">
+
+		<div class="col-md-6 col-xs-6">
+            <img src="{% static 'images/IMG_8991.JPG' %}" alt="" class="img-responsive">
+		</div>
+		<div class="col-md-6 col-xs-6">
+            <img src="{% static 'images/IMG_8831.jpg' %}" alt="" class="img-responsive">
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<!-- //featured-product -->
+	<!-- featured -->
+	<div class="featured cd-section"> 
+		<div class="container">  
+			<h3 class="agileinfo_title">Curated <span>Products</span> </h3>
+			<div class="featured-agileinfo">
+				<div class="col-md-7 featured-w3grid-img">
+					<a href="#myModal" data-toggle="modal" class="wthree-featuredimg">  
+						<img src="{% static 'images/IMG_8971.jpg' %}" class="img-responsive" alt=""/>
+					</a>  
+				</div>
+				<div class="col-md-5 featured-w3grid-text"> 
+					<h4><a href="#myModal" data-toggle="modal">Custom-made Backpacks</a></h4>
+                    <p>From our wide array of backpacks, choose the one that fancies your eyes. Be it a laptop bag,
+                        monkey bag, sling bag or travelling bag, we got you covered.</p>
+                </div>
+				<div class="clearfix"> </div>
+			</div> 
+			<div class="featured-agileinfo featured-agileinfo-mdl">
+				<div class="col-md-7 featured-w3grid-img featured-img-rght">
+					<a href="#myModal" data-toggle="modal" class="wthree-featuredimg">  
+						<img src="{% static 'images/IMG_8827.jpg' %}" class="img-responsive" alt=""/>
+					</a>  
+				</div>
+				<div class="col-md-5 featured-w3grid-text"> 
+					<h4><a href="#myModal" data-toggle="modal">His n Hers Tops</a></h4>
+                    <p>We vend out high quality tees for Him n Her. You can grab a Kenyan-lifestyle tee or have your
+                        own artwork printed on it uniquely for you.
+                    </p>
+                </div>
+				<div class="clearfix"> </div>
+			</div> 
+			<div class="featured-agileinfo">
+				<div class="col-md-7 featured-w3grid-img">
+					<a href="#myModal" data-toggle="modal" class="wthree-featuredimg">  
+						<img src="{% static 'images/IMG_8921.jpg' %}" class="img-responsive" alt=""/>
+					</a>  
+				</div>
+				<div class="col-md-5 featured-w3grid-text"> 
+					<h4><a href="#myModal" data-toggle="modal">Jackets</a></h4>
+                    <p>Get a college jacket on the go. Choose from a wide variety of colors and sizes.</p>
+                </div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="featured-agileinfo featured-agileinfo-mdl">
+				<div class="col-md-7 featured-w3grid-img featured-img-rght">
+					<a href="#myModal" data-toggle="modal" class="wthree-featuredimg">
+						<img src="{% static 'images/IMG_8816.jpg' %}" class="img-responsive" alt=""/>
+					</a>
+				</div>
+				<div class="col-md-5 featured-w3grid-text">
+					<h4><a href="#myModal" data-toggle="modal">Pants</a></h4>
+                    <p></p>
+                </div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //featured -->
+	<div id="gallery" class="gallery">
+		<div class="container-fluid text-center">
+			<h3 class="agileinfo_title">Our <span>Gallery</span> </h3>
+            <p style="color: #000000;">Drop your pic adorning any of our products and stand a chance of being
+                featured in our gallery</p>
+		</div>
+		<!-- Owl-Carousel -->
+		<div id="owl-demo" class="owl-carousel text-center agileinfo-gallery-row">
+			<a href="{% static 'images/IMG_8816.jpg' %}" class="item g1">
+				<img class="lazyOwl" src="{% static 'images/IMG_8816.jpg' %}" title="Keep it Kenyan Lifestyle" alt=""/>
+				<div class="agile-galry-caption">
+					<h4>Keep it Kenyan Lifestyle</h4>
+					<span></span>
+				</div>
+			</a>
+			<a href="{% static 'images/IMG_8817.jpg' %}" class="item g1">
+				<img class="lazyOwl" src="{% static 'images/IMG_8817.jpg' %}" title="Keep it Kenyan Lifestyle" alt=""/>
+				<div class="agile-galry-caption">
+					<h4>Keep it Kenyan Lifestyle</h4>
+					<span></span>
+				</div>
+			</a>
+			<a href="{% static 'images/IMG_8827.jpg' %}" class="item g1">
+				<img class="lazyOwl" src="{% static 'images/IMG_8827.jpg' %}" title="Keep it Kenyan Lifestyle" alt=""/>
+				<div class="agile-galry-caption">
+					<h4>Keep it Kenyan Lifestyle</h4>
+					<span></span>
+				</div>
+			</a>
+			<a href="{% static 'images/IMG_8831.jpg' %}" class="item g1">
+				<img class="lazyOwl" src="{% static 'images/IMG_8831.jpg' %}" title="Keep it Kenyan Lifestyle" alt=""/>
+				<div class="agile-galry-caption">
+					<h4>Keep it Kenyan Lifestyle</h4>
+					<span></span>
+				</div>
+			</a>
+			<a href="{% static 'images/IMG_8839.jpg' %}" class="item g1">
+				<img class="lazyOwl" src="{% static 'images/IMG_8839.jpg' %}" title="Keep it Kenyan Lifestyle" alt=""/>
+				<div class="agile-galry-caption">
+					<h4>Keep it Kenyan Lifestyle</h4>
+					<span></span>
+				</div>
+			</a>
+			<a href="{% static 'images/IMG_8841.jpg' %}" class="item g1">
+				<img class="lazyOwl" src="{% static 'images/IMG_8841.jpg' %}" title="Keep it Kenyan Lifestyle" alt=""/>
+				<div class="agile-galry-caption">
+					<h4>Keep it Kenyan Lifestyle</h4>
+					<span></span>
+				</div>
+			</a>
+			<a href="{% static 'images/IMG_8857.jpg' %}" class="item g1">
+				<img class="lazyOwl" src="{% static 'images/IMG_8857.jpg' %}" title="Keep it Kenyan Lifestyle" alt=""/>
+				<div class="agile-galry-caption">
+					<h4>Keep it Kenyan Lifestyle</h4>
+					<span></span>
+				</div>
+			</a>
+			<a href="{% static 'images/IMG_8890.jpg' %}" class="item g1">
+				<img class="lazyOwl" src="{% static 'images/IMG_8890.jpg' %}" title="Keep it Kenyan Lifestyle" alt=""/>
+				<div class="agile-galry-caption">
+					<h4>Keep it Kenyan Lifestyle</h4>
+					<span></span>
+				</div>
+			</a>
+			<a href="{% static 'images/IMG_8959.jpg' %}" class="item g1">
+				<img class="lazyOwl" src="{% static 'images/IMG_8959.jpg' %}" title="Keep it Kenyan Lifestyle" alt=""/>
+				<div class="agile-galry-caption">
+					<h4>Keep it Kenyan Lifestyle</h4>
+					<span></span>
+				</div>
+			</a>
+			<a href="{% static 'images/IMG_8921.jpg' %}" class="item g1">
+				<img class="lazyOwl" src="{% static 'images/IMG_8921.jpg' %}" title="Keep it Kenyan Lifestyle" alt=""/>
+				<div class="agile-galry-caption">
+					<h4>Keep it Kenyan Lifestyle</h4>
+					<span></span>
+				</div>
+			</a>
+		</div>
+		<script type="text/javascript" src="{% static 'js/simple-lightbox.min.js' %}"></script>
+		<script>
+			$(function(){
+				var gallery = $('.agileinfo-gallery-row a').simpleLightbox({navText:		['&lsaquo;','&rsaquo;']});
+			});
+		</script>
+	</div>
+	<!-- //gallery -->
+	<!-- modal -->
+	<div class="modal about-modal w3-agileits fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div> 
+				<div class="modal-body">
+					<img src="{% static 'images/IMG_8857.jpg' %}" alt="">
+					<h5>Its Kenyan Lifestyle</h5>
+                    <p>Kenyan Lifestyle is a movement built upon the belief that each and every individual should
+                        wear what he/she wants or feels like wearing. Since its, it has been at the
+                        forefront of fashion with its signature bold prints and urban apparels.</p>
+                </div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+
+{% endblock %}
