@@ -1,1 +1,1 @@
-web: gunicorn kenyanlifestyle.wsgi
+web: gunicorn mysite.wsgi --log-file -
