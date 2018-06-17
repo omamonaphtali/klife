@@ -1,0 +1,119 @@
+/*small screens and default*/
+body{
+    margin: 0;
+    padding: 0;
+}
+.row{
+    margin-top: 15px!important;
+}
+/*
+nav{
+    width: 100%;
+    background: transparent;
+}
+nav ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 5px 15px;
+}
+nav ul li a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+nav ul li a:hover, nav ul li:hover,
+nav ul li a:active, nav ul li:active{
+    text-underline: none;
+    text-decoration: none;
+    color: #fff94f;
+}
+.toggle{
+    width: 100%;
+    padding: 20px 30px;
+    background: black;
+    text-align: right;
+    box-sizing: border-box;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFFFFF!important;
+}
+.fa-bars{
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF!important;
+}*/
+.banner{
+    height: 300px;
+    background: url('../images/IMG_8836.jpg') no-repeat fixed center center;
+    background-size: cover;
+}
+.featured .col-md-4:first-child, .featured .col-md-4:last-child{
+    display: none;
+}
+
+
+.footer{
+    min-height: 50px;
+    line-height: 50px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/*medium-sized screens*/
+@media screen and (min-width: 421px) {
+    .banner{
+        height: 400px;
+        background: url('../images/IMG_8836.jpg') no-repeat fixed center center;
+        background-size: cover;
+    }
+    .featured .col-md-4{
+        height: 90vh;
+    }
+    .feat-container, .feat-img{
+        /*max-height: 50%;*/
+        overflow: visible;
+    }
+    .feat-img{
+        padding: 0;
+        margin: 0;
+    }
+    .feat-img .img-responsive{
+        margin: auto;
+        height: 100%!important;
+        /*height: 200px;*/
+    }
+    /*.look-container*/
+
+}
+
+/*@media screen and (min-width: 768px) {*/
+    /*.featured .col-md-4:first-child, .featured .col-md-4:last-child{*/
+        /*visibility: visible;*/
+    /*}*/
+    /*.featured .categories{*/
+        /*visibility: hidden;*/
+    /*}*/
+/*}*/
+
+/*desktops*/
+@media screen and (min-width: 961px) {
+    .banner{
+        height: 100vh;
+        background: url('../images/IMG_8836.jpg') no-repeat fixed center center;
+        background-size: cover;
+    }
+    .featured .col-md-4:first-child, .featured .col-md-4:last-child{
+        visibility: visible;
+        display: inline-block;
+    }
+    .featured .categories a {
+        display: none;
+    }
+    .feat-img .img-responsive{
+        max-height: 40vh;
+    }
+}

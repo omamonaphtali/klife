@@ -1,0 +1,16 @@
+Django
+whitenoise
+dj_database_url
+gunicorn
+psycopg2-binary
+Pillow
+dj-static
+django-appconf
+django-image-cropping
+easy-thumbnails
+heroku
+python-dateutil
+requests
+six
+static3
+virtualenv

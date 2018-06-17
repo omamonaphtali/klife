@@ -1,0 +1,33 @@
+{% extends 'base_layout.html' %}
+
+{% block head_title %}
+    {{ post.title }} | {{ block.super }}
+{% endblock head_title %}
+
+<div class="col-sm-6 col-sm-offset-3">
+    {% block content %}
+    <div class="mini-banner">
+        {% include 'includes/navbar.html' %}
+    </div>
+    {{ title }}<br/>
+        {{ product.name }}<br/>
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }} avatar" class="img-responsive">
+        {% endif %}
+        <br/>
+        {{ product.price}}<br/>
+
+        {{ request.build_absolute_uri }}
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">Share on Facebook</a>
+
+        <a href="https://twitter.com/home?status={{ share_string }}%20{{ request.build_absolute_uri }}">
+            Share on Twitter
+            </a>
+
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title
+        ={{ share_string }}%20me!&source={{ request.build_absolute_uri }}">
+        Share on Linkedin
+        </a>
+    {% endblock %}
+</div>
