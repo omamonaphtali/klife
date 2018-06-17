@@ -25,7 +25,7 @@ SECRET_KEY = 'mu2r8v6q!c%aa+gkqovblpkce77jn36jwqa6i^h-d7&xsa+f(k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '.kenyalifestyle.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '.kenyanlifestyle.herokuapp.com']
 
 
 # Application definition
