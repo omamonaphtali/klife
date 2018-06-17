@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -37,11 +38,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
+    'cloudinary',
     'webapp',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -106,8 +110,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "webapp/static")
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'virtual/static_cdn')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'virtual/media_cdn')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
