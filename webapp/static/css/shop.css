@@ -780,13 +780,11 @@ span.item_price {
 }
 
 .product-sec1.product-sec2 {
-	background: url(../images/bg1.jpg)no-repeat 0px 0px;
-	background-attachment: fixed;
+	background: url(../images/bg1.jpg) no-repeat fixed 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	-moz-background-size: cover;
-	-ms-background-size: cover;
 	position: relative;
 }
 
@@ -1137,9 +1135,8 @@ input.button.add {
 	}
 	.product-shoe-info {
 		padding: 15px;
-		width: 47%;
+		width: 100%;
 		margin: 0.5em;
-		float: left;
 	}
 	#staplesbmincart {
 		left: 52%;

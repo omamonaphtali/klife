@@ -51,8 +51,19 @@ nav ul li a:active, nav ul li:active{
     background: url('../images/IMG_8836.jpg') no-repeat fixed center center;
     background-size: cover;
 }
+.featured {
+    display: inline;
+    text-align: center;
+}
 .featured .col-md-4:first-child, .featured .col-md-4:last-child{
     display: none;
+}
+.featured .categories a{
+    color: #FFFFFF;
+    background-color: black;
+    padding: 10px 20px;
+    display: inline-block;
+    font-weight: 600;
 }
 
 
@@ -62,7 +73,6 @@ nav ul li a:active, nav ul li:active{
     background-color: #000000;
     color: #FFFFFF;
 }
-
 /*medium-sized screens*/
 @media screen and (min-width: 421px) {
     .banner{

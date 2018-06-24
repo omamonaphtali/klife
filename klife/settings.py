@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import dj_database_url
+import cloudinary
+# import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -100,6 +101,12 @@ USE_L10N = True
 
 USE_TZ = True
 
+# cloudinary configurations
+cloudinary.config(
+    cloud_name="jaredomamo",
+    api_key="137829138436793",
+    api_secret="ckv0xOZgeQdUZcEp8eVmXM2pi0Y"
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
@@ -107,11 +114,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "webapp/static")
+    os.path.join(BASE_DIR, 'webapp/static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'virtual/media_cdn')
