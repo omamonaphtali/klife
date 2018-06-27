@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import cloudinary
+# import cloudinary
 # import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -102,11 +102,11 @@ USE_L10N = True
 USE_TZ = True
 
 # cloudinary configurations
-cloudinary.config(
-    cloud_name="jaredomamo",
-    api_key="137829138436793",
-    api_secret="ckv0xOZgeQdUZcEp8eVmXM2pi0Y"
-)
+# cloudinary.config(
+#     cloud_name="jaredomamo",
+#     api_key="137829138436793",
+#     api_secret="ckv0xOZgeQdUZcEp8eVmXM2pi0Y"
+# )
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/

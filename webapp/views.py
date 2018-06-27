@@ -49,10 +49,29 @@ def product_create(request):
 
 
 def product_detail(request, pk):
+    queryset_list = Product.objects.all()  # .order_by("-timestamp")
+    # search query
+    query = request.GET.get("q")
+    if query:
+        queryset_list = queryset_list.filter(
+            Q(title__icontains=query) |
+            Q(content__icontains=query)
+        ).distinct()
+    paginator = Paginator(queryset_list, 4)  # Show 4 items per page
+    page_request_var = 'page'
+    page = request.GET.get(page_request_var)
+    try:
+        queryset = paginator.page(page)
+    except PageNotAnInteger:
+        queryset = paginator.page(1)
+    except EmptyPage:
+        queryset = paginator.page(paginator.num_pages)
     instance = get_object_or_404(Product, id=pk)
     # share_string = quote(instance.content)
     context = {
         "title": "Detail",
+        "object_list": queryset,
+        "page_request_var": page_request_var,
         "product": instance,
         # "share_string": share_string
     }

@@ -11,6 +11,10 @@ def upload_location(instance, filename):
     return "%s/%s" % (instance.id, filename)
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=50, default='general')
+
+
 class Product(models.Model):
     name = models.CharField(max_length=50)
     slug = models.SlugField(unique=True)
@@ -21,6 +25,7 @@ class Product(models.Model):
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
     price = models.IntegerField(default=1500)
+    # category = models.ForeignKey(Category, default='general')
     updated = models.TimeField(auto_now=True, auto_now_add=False)
     timestamp = models.TimeField(auto_now=False, auto_now_add=True)
     # auto_now updates every time it is saved
