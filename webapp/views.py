@@ -11,8 +11,17 @@ from .models import Product
 
 
 def index_view(request):
+    queryset_list = Product.objects.all()[:3] # .order_by("-timestamp")
+    # search query
+    query = request.GET.get("q")
+    if query:
+        queryset_list = queryset_list.filter(
+            Q(title__icontains=query) |
+            Q(content__icontains=query)
+        ).distinct()
     context = {
-        "title": "Home"
+        "title": "Home",
+        "object_list": queryset_list
     }
     return render(request, 'index.html', context)
 
@@ -97,11 +106,42 @@ def product_list(request):
     except EmptyPage:
         queryset = paginator.page(paginator.num_pages)
     context = {
-        "title": "List",
+        "title": "Shop",
         "object_list": queryset,
         "page_request_var": page_request_var
     }
-    return render(request, 'index.html', context)
+    return render(request, 'shop.html', context)
+
+# review this and debug
+
+def product_category(request, cat):
+    #     queryset_list = Product.objects.filter(tag=cat)  # .order_by("-timestamp")
+    #     # search query
+    #     query = request.GET.get("q")
+    #     if query:
+    #         queryset_list = queryset_list.filter(
+    #             Q(title__icontains=query) |
+    #             Q(content__icontains=query)
+    #         ).distinct()
+    #     paginator = Paginator(queryset_list, 9)  # Show 9 items per page
+    #     page_request_var = 'page'
+    #     page = request.GET.get(page_request_var)
+    #     try:
+    #         queryset = paginator.page(page)
+    #     except PageNotAnInteger:
+    #         queryset = paginator.page(1)
+    #     except EmptyPage:
+    #         queryset = paginator.page(paginator.num_pages)
+    #     instance = get_object_or_404(Product, tag=cat)
+    #     # share_string = quote(instance.content)
+        context = {
+            "title": "Detail",
+                # "object_list": queryset,
+                # "page_request_var": page_request_var,
+                # "product": instance,
+                # # "share_string": share_string
+        }
+        return render(request, 'shop.html', context)
 
 
 def product_update(request, pk=None):

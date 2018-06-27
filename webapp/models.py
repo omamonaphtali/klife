@@ -1,5 +1,6 @@
 from django.core.urlresolvers import reverse
 from django.db import models
+from django.db.models import lookups
 from django.db.models.signals import pre_save
 
 from django.utils.text import slugify
@@ -11,8 +12,12 @@ def upload_location(instance, filename):
     return "%s/%s" % (instance.id, filename)
 
 
-class Category(models.Model):
-    name = models.CharField(max_length=50, default='general')
+class Tag(models.Model):
+    title = models.CharField(max_length=50, unique=True)
+    description = models.TextField(null=True)
+
+    def __str__(self):
+        return self.title
 
 
 class Product(models.Model):
@@ -25,7 +30,8 @@ class Product(models.Model):
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
     price = models.IntegerField(default=1500)
-    # category = models.ForeignKey(Category, default='general')
+    tag = models.ForeignKey(Tag, null=True)
+    description = models.TextField(null=False, default='')
     updated = models.TimeField(auto_now=True, auto_now_add=False)
     timestamp = models.TimeField(auto_now=False, auto_now_add=True)
     # auto_now updates every time it is saved
@@ -59,3 +65,25 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
 
 
 pre_save.connect(pre_save_post_receiver, sender=Product)
+
+
+class Review(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    product = models.ForeignKey(Product)
+    description = models.TextField(null=True)
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+
+# class CategoryFilter(lookups):
+#     lookup_name = 'cf'
+#
+#     def as_sql(self, compiler, connection):
+#         lhs, lhs_params = self.process_lhs(compiler, connection)
+#         rhs, rhs_params = self.process_rhs(compiler, connection)
+#         params = lhs_params + rhs_params
+#         return '%s <> %s' % (lhs, rhs), params
+#
+#     CategoryFilter.register_lookup(CategoryFilter)

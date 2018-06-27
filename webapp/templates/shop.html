@@ -3,82 +3,12 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/shop.css' %}" />
     <!-- banner -->
-    <div class="banner">
-        {% include 'includes/navbar.html' %}
-    </div>
+    {% include 'includes/navbar.html' %}
     <!-- featured categories and pic -->
-    <div class="row">
-        <div class="featured">
-            <h4 class="categories"><a href="#">BACKPACKS</a></h4>
-            <h4 class="categories"><a href="#">PANTS</a></h4>
-            <h4 class="categories"><a href="#">HOODIES</a></h4>
-            <h4 class="categories"><a href="#">TOPS</a></h4>
-        </div>
-        <div class="featured">
-            <div class="col-md-4 text-center">
-                <div class="feat-container">
-                    <h4>JACKETS</h4>
-                    <div class="feat-img">
-                        <img src="{% static 'images/IMG_8817.jpg' %}" alt="brown leather bag" class="img-responsive" />
-                    </div>
-                </div>
-                <div class="feat-container">
-                    <h4>PANTS</h4>
-                    <div class="feat-img">
-                        <img src="{% static 'images/IMG_8959.jpg' %}" alt="brown leather bag" class="img-responsive" />
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 center">
-                <img src="{% static 'images/kl.jpg' %}" alt="" class="img-responsive" />
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="feat-container">
-                    <h4>TOPS</h4>
-                    <div class="feat-img">
-                        <img src="{% static 'images/IMG_8827.jpg' %}" alt="brown leather bag" class="img-responsive" />
-                    </div>
-                </div>
-                <div class="feat-container">
-                    <h4>BACK PACKS</h4>
-                    <div class="feat-img">
-                        <img src="{% static 'images/IMG_8843.jpg' %}" alt="brown leather bag" class="img-responsive" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- best sellers -->
-    <div>
-        <div class="slider-frame">
-            <div class="btn prev"></div>
-            <div class="btn next"></div>
-            <div class="slider-container">
-                <div class="slide">0</div>
-                <div class="slide">1</div>
-                <div class="slide">2</div>
-                <div class="slide">3</div>
-                <div class="slide">4</div>
-                <div class="slide">5</div>
-                <div class="slide">6</div>
-                <div class="slide">7</div>
-                <div class="slide">8</div>
-                <div class="slide">9</div>
-            </div>
-        </div>
-    </div>
+
         <div class="row">
             <div class="left-ads-display col-md-12">
                 <div class="wrapper_top_shop">
-                    <div class="col-md-6 shop_left">
-                        <img src="{% static 'images/banner3.jpg' %}" alt="">
-                        <h6>40% off</h6>
-                    </div>
-                    <div class="col-md-6 shop_right">
-                        <img src="{% static 'images/banner2.jpg' %}" alt="">
-                        <h6>50% off</h6>
-                    </div>
-                    <div class="clearfix"></div>
                     <!-- product-sec1 -->
                     <div class="product-sec1">
                         <!--/mens-->
